@@ -55,13 +55,71 @@
 
     <!-- Main -->
     <main>
-        <!-- main ontainer -->
-        <div class="container">
+        <!-- main container -->
+        <div class="container pt-4">
             <!-- main row -->
             <div class="row">
                 <!-- Form column -->
-                <div class="col">
+                <div class="col-12 col-md-8">
+                    <h1>Richiesta Preventivo</h1>
 
+                    <p>Compila il form per richiedere un preventivo per i nostri servizi di sviluppo.</p>
+
+                    <!-- Form -->
+                    <form autocomplete="off">
+                        <!-- Name -->
+                        <label for="name" class="form-label">Nome</label>
+                        <input type="text" id="name" required class="form-control mb-3" aria-label="Nome">
+
+                        <!-- Surname -->
+                        <label for="surname" class="form-label">Cognome</label>
+                        <input type="text" id="surname" required class="form-control mb-3" aria-label="Cognome">
+
+                        <!-- Email -->
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control mb-3" id="email" required aria-label="Email">
+
+                        <!-- Job type -->
+                        <label for="jobType" class="form-label">Tipo di lavoro</label>
+                        <select id="jobType" required class="form-select mb-3" aria-label="Seleziona il tipo di lavoro">
+                            <option selected>Seleziona il tipo di lavoro</option>
+
+                            <option aria-label="Sviluppo Backend">Sviluppo Backend</option>
+
+                            <option aria-label="Sviluppo Frontend">Sviluppo Frontend</option>
+
+                            <option aria-label="Analisi Progettuale">Analisi Progettuale</option>
+                        </select>
+
+                        <!-- Textarea -->
+                        <label for="textArea" class="form-label">Textarea con Bootstrap 5</label>
+                        <textarea id="textArea" required class="form-control mb-3" rows="3"></textarea>
+
+                        <!-- Promo code -->
+                        <label for="promo" class="form-label">Codice promozionale (Opzionale)</label>
+                        <input type="text" class="form-control mb-3">
+
+                        <!-- Privacy Policy check -->
+                        <input type="checkbox" id="privacy" required class="form-check-input">
+                        <label for="privacy" class="form-label mb-5">Accetto la Privacy Policy</label>
+
+                        <!-- Submit -->
+                        <div class="row px-5 justify-content-between align-items-center">
+                            <!-- Button -->
+                            <div class="col-12 col-md-6 text-center">
+                                <button type="submit" class="btn btn-primary">Calcola preventivo</button>
+                            </div>
+
+                            <!-- Final price -->
+                            <div class="col-12 col-md-6 text-center">
+                                <p class="fs-5 fw-bold m-0">
+                                    Prezzo finale <br> <span class="fs-2">&euro; 200</span><span class="fw-medium text-secondary">,00</span>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- End submit -->
+                    </form>
+                    <!-- End form -->
                 </div>
                 <!-- End form column -->
 
