@@ -15,7 +15,7 @@
     <!-- Header -->
     <header>
         <!-- Nav -->
-        <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+        <nav class="navbar navbar-expand-md bg-dark" data-bs-theme="dark">
             <!-- Nav container -->
             <div class="container">
                 <!-- Navbar brand -->
@@ -93,39 +93,67 @@
 
                         <!-- Textarea -->
                         <label for="textArea" class="form-label">Textarea con Bootstrap 5</label>
-                        <textarea id="textArea" required class="form-control mb-3" rows="3"></textarea>
+                        <textarea id="textArea" required class="form-control mb-3" rows="3"
+                            aria-label="Area di testo"></textarea>
 
                         <!-- Promo code -->
                         <label for="promo" class="form-label">Codice promozionale (Opzionale)</label>
-                        <input type="text" class="form-control mb-3">
+                        <input type="text" class="form-control mb-3" aria-label="Codice promozionale (opzionale)">
 
                         <!-- Privacy Policy check -->
-                        <input type="checkbox" id="privacy" required class="form-check-input">
-                        <label for="privacy" class="form-label mb-5">Accetto la Privacy Policy</label>
+                        <input type="checkbox" id="privacy" required class="form-check-input"
+                            aria-label="Accetto la Privacy Policy">
+                        <label for="privacy" class="form-label">Accetto la <a href="#">Privacy Policy</a></label>
 
-                        <!-- Submit -->
-                        <div class="row px-5 justify-content-between align-items-center">
-                            <!-- Button -->
+                        <!-- Price calc row -->
+                        <div class="row my-5 align-items-center">
+                            <!-- Submit -->
                             <div class="col-12 col-md-6 text-center">
-                                <button type="submit" class="btn btn-primary">Calcola preventivo</button>
+                                <button type="submit" class="btn btn-primary" aria-label="Calcola preventivo">Calcola
+                                    preventivo</button>
                             </div>
 
                             <!-- Final price -->
-                            <div class="col-12 col-md-6 text-center">
-                                <p class="fs-5 fw-bold m-0">
-                                    Prezzo finale <br> <span class="fs-2">&euro; 200</span><span class="fw-medium text-secondary">,00</span>
+                            <div class="col-12 col-md-6 text-center" aria-label="Il prezzo finale è di ...">
+                                <p class="fs-5 fw-bold m-0 mt-2 m-md-0">
+                                    Prezzo finale <br> <span class="fs-2">&euro; 200</span><span
+                                        class="fw-medium text-secondary">,00</span>
                                 </p>
                             </div>
                         </div>
-                        <!-- End submit -->
+                        <!-- End price calc row -->
                     </form>
                     <!-- End form -->
                 </div>
                 <!-- End form column -->
 
                 <!-- Card column -->
-                <div class="col">
+                <div class="col-12 col-md-4 d-flex justify-content-center justify-content-md-end align-items-start">
+                    <!-- Card -->
+                    <div class="card"">
+                        <!-- card image -->
+                        <img src=" ./img/300x200.jpg" class="card-img-top" alt="300 x 200 img">
 
+                        <!-- Card body -->
+                        <div class="card-body">
+                            <h5 class="card-title">I nostri contatti</h5>
+
+                            <p class="card-text">
+                                Se hai bisogno di aiuto puoi contattarci:
+                            </p>
+                        </div>
+
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">help@boolfactory.test</li>
+                            <li class="list-group-item">+1122334455</li>
+                        </ul>
+
+                        <div class="card-body">
+                            <a href="#" class="card-link" aria-label="Help desk">Help desk</a>
+                        </div>
+                        <!-- End card body -->
+                    </div>
+                    <!-- End card -->
                 </div>
                 <!-- End card column -->
             </div>
@@ -137,7 +165,9 @@
 
     <!-- Footer -->
     <footer>
-
+        <div class="bg-dark mt-5 mt-md-0 text-center">
+            <p class="text-light m-0 pt-4 pb-5">&#9400; 2024 - Tutti i diritti riservati</p>
+        </div>
     </footer>
     <!-- End footer -->
 
