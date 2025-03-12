@@ -80,31 +80,32 @@ function formHandler(event) {
     event.preventDefault();
 
     if (jobTypeElem.value === "Seleziona il tipo di lavoro") {
-        jobTypeErrorElem.innerText = "Selezion un tipo di lavoro"
+        jobTypeErrorElem.innerText = "Seleziona un tipo di lavoro"
 
         finalPriceElem.innerHTML = `Prezzo finale <br> <span class="fs-2">&euro; 0</span><span class="fw-medium text-secondary">,00</span>`
     } else {
         jobTypeErrorElem.innerText = ""
 
-        const discount = selectedJobType(jobTypeElem.value) * 25 / 100;
+        const basePrice = selectedJobType(jobTypeElem.value);
+        const discount = basePrice * 25 / 100;
         let finalResult;
 
         if (promoCodeElem.value === "YHDNU32" || promoCodeElem.value === "JANJC63" || promoCodeElem.value === "PWKCN25" || promoCodeElem.value === "SJDPO96" || promoCodeElem.value === "POCIE24") {
             promoErrorElem.innerText = ""
 
-            finalResult = selectedJobType(jobTypeElem.value) - discount;
+            finalResult = basePrice - discount;
 
             finalPriceElem.innerHTML = `Prezzo finale <br> <span class="fs-2">&euro; ${parseInt(finalResult)}</span><span class="fw-medium text-secondary">,${getDecimals(finalResult)}</span>`;
 
         } else if (promoCodeElem.value === "") {
             promoErrorElem.innerText = ""
 
-            finalResult = selectedJobType(jobTypeElem.value);
+            finalResult = basePrice;
 
             finalPriceElem.innerHTML = `Prezzo finale <br> <span class="fs-2">&euro; ${parseInt(finalResult)}</span><span class="fw-medium text-secondary">,${getDecimals(finalResult)}</span>`;
 
         } else {
-            finalResult = selectedJobType(jobTypeElem.value);
+            finalResult = basePrice;
 
             finalPriceElem.innerHTML = `Prezzo finale <br> <span class="fs-2">&euro; ${parseInt(finalResult)}</span><span class="fw-medium text-secondary">,${getDecimals(finalResult)}</span>`;
 
