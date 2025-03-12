@@ -69,7 +69,7 @@ function selectedJobType(jobTypeValue) {
 }
 
 function getDecimals(number) {
-    let numberStr = number.toString();
+    let numberStr = number.toFixed(2).toString();
     let dot = numberStr.indexOf(".");
     let decimals = numberStr.substring(dot + 1, dot + 3);
 
