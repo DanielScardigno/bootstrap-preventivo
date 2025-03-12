@@ -66,44 +66,52 @@
                     <p>Compila il form per richiedere un preventivo per i nostri servizi di sviluppo.</p>
 
                     <!-- Form -->
-                    <form autocomplete="off">
+                    <form autocomplete="off" id="form">
                         <!-- Name -->
                         <label for="name" class="form-label">Nome</label>
                         <input type="text" id="name" required class="form-control mb-3" aria-label="Nome">
+                        <!-- Name error -->
+                        <p class="text-danger" id="nameError"></p>
 
                         <!-- Surname -->
                         <label for="surname" class="form-label">Cognome</label>
                         <input type="text" id="surname" required class="form-control mb-3" aria-label="Cognome">
+                        <!-- Surname error -->
+                        <p class="text-danger" id="surnameError"></p>
 
                         <!-- Email -->
                         <label for="email" class="form-label">Email</label>
                         <input type="email" class="form-control mb-3" id="email" required aria-label="Email">
+                        <!-- Email error -->
+                        <p class="text-danger" id="emailError"></p>
 
                         <!-- Job type -->
                         <label for="jobType" class="form-label">Tipo di lavoro</label>
                         <select id="jobType" required class="form-select mb-3" aria-label="Seleziona il tipo di lavoro">
-                            <option selected>Seleziona il tipo di lavoro</option>
-
-                            <option aria-label="Sviluppo Backend">Sviluppo Backend</option>
-
-                            <option aria-label="Sviluppo Frontend">Sviluppo Frontend</option>
-
-                            <option aria-label="Analisi Progettuale">Analisi Progettuale</option>
+                            
                         </select>
+                        <!-- Job type error -->
+                        <p class="text-danger" id="jobTypeError"></p>
 
-                        <!-- Textarea -->
+                        <!-- Text area -->
                         <label for="textArea" class="form-label">Textarea con Bootstrap 5</label>
                         <textarea id="textArea" required class="form-control mb-3" rows="3"
                             aria-label="Area di testo"></textarea>
+                        <!-- Text area error -->
+                        <p class="text-danger" id="textAreaError"></p>
 
                         <!-- Promo code -->
                         <label for="promo" class="form-label">Codice promozionale (Opzionale)</label>
-                        <input type="text" class="form-control mb-3" aria-label="Codice promozionale (opzionale)">
+                        <input type="text" id="promo" class="form-control mb-3" aria-label="Codice promozionale (opzionale)">
+                        <!-- Promo error -->
+                        <p class="text-danger" id="promoError"></p>
 
                         <!-- Privacy Policy check -->
                         <input type="checkbox" id="privacy" required class="form-check-input"
                             aria-label="Accetto la Privacy Policy">
                         <label for="privacy" class="form-label">Accetto la <a href="#">Privacy Policy</a></label>
+                        <!-- Privacy Policy error -->
+                        <p class="text-danger" id="privacyError"></p>
 
                         <!-- Price calc row -->
                         <div class="row my-5 align-items-center">
@@ -115,8 +123,8 @@
 
                             <!-- Final price -->
                             <div class="col-12 col-md-6 text-center" aria-label="Il prezzo finale è di ...">
-                                <p class="fs-5 fw-bold m-0 mt-2 m-md-0">
-                                    Prezzo finale <br> <span class="fs-2">&euro; 200</span><span
+                                <p class="fs-5 fw-bold m-0 mt-2 m-md-0" id="finalPrice">
+                                    Prezzo finale <br> <span class="fs-2">&euro; 0</span><span
                                         class="fw-medium text-secondary">,00</span>
                                 </p>
                             </div>
